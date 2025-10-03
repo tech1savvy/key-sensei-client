@@ -1,9 +1,10 @@
 # Stage 1: Build the React application
-FROM node:18-alpine
+FROM node:20-alpine
 
 WORKDIR /app
 
 COPY package*.json ./
+RUN rm -rf node_modules package-lock.json
 RUN npm install
 COPY . .
 RUN npm run build
