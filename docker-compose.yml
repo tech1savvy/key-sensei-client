@@ -1,0 +1,6 @@
+services:
+  client:
+    build: .
+    ports:
+      - "4173:4173"
+
